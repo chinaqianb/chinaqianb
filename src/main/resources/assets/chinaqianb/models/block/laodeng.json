@@ -1,0 +1,6 @@
+{
+  "parent": "block/laodeng",
+  "textures": {
+    "layer0": "chinaqianb:block/laodeng"
+  }
+}

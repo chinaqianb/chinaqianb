@@ -1,10 +1,12 @@
 package minecraftgtyf1.chinaqianb;
 
-import net.minecraft.item.Item;
-import net.minecraft.item.SwordItem;
-import net.minecraft.item.ToolItem;
-import net.minecraft.item.ToolMaterial;
+import net.minecraft.client.item.TooltipContext;
+import net.minecraft.item.*;
 import net.minecraft.recipe.Ingredient;
+import net.minecraft.text.Text;
+import net.minecraft.world.World;
+
+import java.util.List;
 
 public  class sword implements ToolMaterial {
     public static final sword INSTANCE = new sword();
@@ -14,48 +16,40 @@ public  class sword implements ToolMaterial {
         return 500;
     }
 
-    @Override
-    public float getMiningSpeedMultiplier() {
-        return 0;
-    }
 
     //破坏速度
-    /*@Override
+    @Override
     public float getMiningSpeedMultiplier() {
         return 10F;
-    }*/
+    }
     //攻击伤害
     @Override
     public float getAttackDamage() {
         return 20F;
     }
 
-    @Override
-    public int getMiningLevel() {
-        return 0;
-    }
+
 
     //挖掘等级
-    /*@Override
+    @Override
     public int getMiningLevel() {
         return 3;
-    }*/
+    }
     //附魔能力
     @Override
     public int getEnchantability() {
         return 20;
     }
 
-    @Override
-    public Ingredient getRepairIngredient() {
-        return null;
-    }
+
 
 
     //修复原料
-    /*@Override
+    @Override
     public Ingredient getRepairIngredient(){
-        return Ingredient.ofItems(Items.sword);
-    }*/
+        return Ingredient.ofItems(Items.AIR);
+    }
+
+
 
 }
