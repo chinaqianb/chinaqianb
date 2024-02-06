@@ -10,10 +10,14 @@
   "contact": {
     "repo": "https://github.com/qiancong/chinaqianb"
   },
+
   "license": "All-Rights-Reserved",
   "icon": "assets/chinaqianb/icon.png",
   "environment": "*",
   "entrypoints": {
+    "fabric-datagen": [
+      "minecraftgtyf1.chinaqianb.DataGeneration"
+    ],
     "client": [
       "minecraftgtyf1.chinaqianb.client.ChinaqianbClient"
     ],

@@ -1,12 +1,7 @@
-package minecraftgtyf1.chinaqianb;
+package minecraftgtyf1.chinaqianb.item;
 
-import net.minecraft.client.item.TooltipContext;
 import net.minecraft.item.*;
 import net.minecraft.recipe.Ingredient;
-import net.minecraft.text.Text;
-import net.minecraft.world.World;
-
-import java.util.List;
 
 public  class sword implements ToolMaterial {
     public static final sword INSTANCE = new sword();

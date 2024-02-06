@@ -1,6 +1,6 @@
 {
-  "parent": "block/laodeng",
+  "parent": "block/cube_all",
   "textures": {
-    "layer0": "chinaqianb:block/laodeng"
+    "all": "chinaqianb:block/laodeng"
   }
 }

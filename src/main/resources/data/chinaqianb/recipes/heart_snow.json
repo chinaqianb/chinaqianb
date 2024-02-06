@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " W ",
+    " R ",
+    "   "
+  ],
+  "key": {
+    "W": {
+      "tag": "minecraft:red_dye"
+    }
+  },
+  "key": {
+    "R": {
+      "tag": "minecraft:apple"
+    }
+  },
+  "result": {
+    "item": "chinaqianb:heart_snow",
+    "count": 16
+  }
+}

@@ -3,8 +3,19 @@
   "item.chinaqianb.eating_b": "eatingb",
   "item.chinaqianb.eating_b.tooltip": "can eat thing",
   "item.chinaqianb.jiang": "little sword",
-  "item.chinaqianb.laodeng": "laodeng",
+  "block.chinaqianb.laodeng": "laodeng",
+  "block.chinaqianb.voi": "o",
+  "item.chinaqianb.voi.jie": "this people",
   "chinaqianb_laodeng_use": "this is a old light",
+  "chinaqianb_laodeng_tooltip": "lao deng is right ,just lao deng",
   "item.jiang.tooltip": "It's a bit of a cow",
-  "chinaqianb.zhu": "photozhu"
+  "chinaqianb.zhu": "photozhu",
+  "entity.chinaqianb.bkill": "Bkill",
+  "item.chinaqianb.bkill_spwan": "Bkill egg",
+  "BOSS_Bkill": "Bkill",
+  "item.s686.xyz": "your pos ",
+  "item.s686.tooltip": "this is a",
+  "item.chinaqianb.s686": "s686",
+  "item.chinaqianb.heart_snow": "heart snow",
+  "item.heart_snow.tooltip": "This is a healing orb that returns 2.5 HP when right-clicked"
 }

@@ -1,4 +1,4 @@
-package minecraftgtyf1.chinaqianb;
+package minecraftgtyf1.chinaqianb.item;
 
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.effect.StatusEffect;

@@ -3,8 +3,19 @@
   "item.chinaqianb.eating_b": "吃b",
   "item.chinaqianb.eating_b.tooltip": "可以吃的玩意",
   "item.chinaqianb.jiang": "小箭",
-  "item.chinaqianb.laodeng": "老灯",
+  "block.chinaqianb.laodeng": "老灯",
+  "block.chinaqianb.voi": "哦",
+  "item.chinaqianb.voi.jie": "翻译吧，这个人",
   "chinaqianb_laodeng_use": "这是一个老灯",
+  "chinaqianb_laodeng_tooltip": "老灯是吧，就是老灯",
   "item.jiang.tooltip": "有点牛b",
-  "chinaqianb.zhu": "照片组"
+  "chinaqianb.zhu": "照片组",
+  "entity.chinaqianb.bkill": "B杀",
+  "item.chinaqianb.bkill_spwan": "B杀刷怪蛋",
+  "BOSS_Bkill": "B杀",
+  "item.s686.xyz": "你的位置是 ",
+  "item.s686.tooltip": "这是一个",
+  "item.chinaqianb.s686": "s686",
+  "item.chinaqianb.heart_snow": "治疗球",
+  "item.heart_snow.tooltip": "这是一个治疗球,右键使用可以回2.5滴血"
 }

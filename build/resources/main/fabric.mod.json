@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "chinaqianb",
-  "version": "1.0-SNAPSHOT",
+  "version": "1.20.1-1.0.0",
   "name": "chinaqianb",
   "description": "",
   "authors": [
@@ -10,10 +10,14 @@
   "contact": {
     "repo": "https://github.com/qiancong/chinaqianb"
   },
+
   "license": "All-Rights-Reserved",
   "icon": "assets/chinaqianb/icon.png",
   "environment": "*",
   "entrypoints": {
+    "fabric-datagen": [
+      "minecraftgtyf1.chinaqianb.DataGeneration"
+    ],
     "client": [
       "minecraftgtyf1.chinaqianb.client.ChinaqianbClient"
     ],
@@ -22,7 +26,7 @@
     ]
   },
   "depends": {
-    "fabricloader": ">=0.14.24",
+    "fabricloader": ">=0.15.6",
     "fabric": "*",
     "minecraft": "1.20.1"
   }

@@ -1,0 +1,12 @@
+{
+  "cha": {
+    "sounds": [
+      {
+        "type": "file",
+        "name": "chinaqianb.cha"
+      }
+    ]
+
+
+  }
+}

@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/chinaqianb.main.iml" filepath="$PROJECT_DIR$/.idea/modules/chinaqianb.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/chinaqianb.test.iml" filepath="$PROJECT_DIR$/.idea/modules/chinaqianb.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/minecraftgtyf1.chinaqianb.main.iml" filepath="$PROJECT_DIR$/.idea/modules/minecraftgtyf1.chinaqianb.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/minecraftgtyf1.chinaqianb.test.iml" filepath="$PROJECT_DIR$/.idea/modules/minecraftgtyf1.chinaqianb.test.iml" />
     </modules>
   </component>
 </project>
