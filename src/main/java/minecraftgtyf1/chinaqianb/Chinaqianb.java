@@ -6,6 +6,7 @@ import minecraftgtyf1.chinaqianb.block.voi;
 import minecraftgtyf1.chinaqianb.blockentity.laodengep;
 import minecraftgtyf1.chinaqianb.blockentity.voientity;
 import minecraftgtyf1.chinaqianb.entity.Bkill;
+
 import minecraftgtyf1.chinaqianb.item.eatingb;
 import minecraftgtyf1.chinaqianb.item.heartsnow;
 import minecraftgtyf1.chinaqianb.item.s686;
@@ -14,8 +15,10 @@ import minecraftgtyf1.chinaqianb.screen.laodengscreenhandle;
 import minecraftgtyf1.chinaqianb.sounds.CHA;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.sound.v1.FabricSoundInstance;
+import net.fabricmc.fabric.api.event.player.UseItemCallback;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
+import net.fabricmc.fabric.api.networking.v1.PlayerLookup;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
@@ -28,18 +31,24 @@ import net.minecraft.client.util.SpriteIdentifier;
 import net.minecraft.entity.EntityDimensions;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.resource.featuretoggle.FeatureFlags;
 import net.minecraft.screen.ScreenHandlerType;
+import net.minecraft.server.network.ServerPlayerEntity;
+import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.math.floatprovider.FloatSupplier;
+
+import java.util.Collection;
 
 public class Chinaqianb implements ModInitializer {
     //物品定义
@@ -127,6 +136,22 @@ public class Chinaqianb implements ModInitializer {
         //Registry.register(Registries.SOUND_EVENT,new Identifier("chinaqianb","cha"),cha);
         //网络发包
         sendwork.clienttoserver();
+
+
+        UseItemCallback.EVENT.register((player, world, hand) -> {
+            if (!player.isCreative()){
+                ItemStack stack =player.getStackInHand(hand);
+                if (stack.getItem()==HEARTSNOW){
+                    stack.decrement(1);
+                   heartsnow.heartCheck(player);
+                    Collection<ServerPlayerEntity> serverworld= PlayerLookup.around((ServerWorld) world,player.getPos(),5);
+                    PlayerEntity severplayer = (PlayerEntity) serverworld.stream().toList();
+                    heartsnow.heartCheck(severplayer);
+                    return TypedActionResult.success(stack);
+                }
+            }
+            return TypedActionResult.pass(ItemStack.EMPTY);
+        });
 
     }
 

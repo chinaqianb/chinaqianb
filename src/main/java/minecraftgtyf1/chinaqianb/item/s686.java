@@ -1,9 +1,16 @@
 package minecraftgtyf1.chinaqianb.item;
 
+import net.fabricmc.fabric.api.networking.v1.PlayerLookup;
 import net.minecraft.client.item.TooltipContext;
+import net.minecraft.client.realms.dto.PlayerActivities;
+import net.minecraft.client.realms.dto.PlayerActivity;
+import net.minecraft.client.realms.dto.PlayerInfo;
+import net.minecraft.entity.player.PlayerAbilities;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.server.PlayerManager;
+import net.minecraft.server.dedicated.gui.PlayerStatsGui;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.Hand;
@@ -27,6 +34,7 @@ public class s686 extends Item {
             String z = String.valueOf(Math.floor(user.getPos().getZ()));
 
             user.sendMessage(Text.translatable("item.s686.xyz").append(Text.literal("x:" + x + "y:" + y + "z:" + z)));
+
         }
         return super.use(world, user, hand);
 
