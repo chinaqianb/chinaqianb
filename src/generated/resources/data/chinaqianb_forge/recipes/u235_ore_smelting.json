@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 10,
+  "experience": 1.0,
+  "ingredient": {
+    "item": "chinaqianb_forge:u235_ore"
+  },
+  "result": "chinaqianb_forge:u235"
+}

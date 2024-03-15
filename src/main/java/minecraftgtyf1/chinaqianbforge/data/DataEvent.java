@@ -3,14 +3,22 @@ package minecraftgtyf1.chinaqianbforge.data;
 import jdk.jfr.Event;
 import minecraftgtyf1.chinaqianbforge.Chinaqianb_forge;
 import net.minecraft.core.HolderLookup;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
+import net.minecraft.data.loot.LootTableProvider;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.storage.loot.parameters.LootContextParamSet;
+import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.IModBusEvent;
+import net.minecraftforge.registries.ForgeRegistries;
 
+import java.util.Collections;
+import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 @Mod.EventBusSubscriber(modid = Chinaqianb_forge.MODID,bus =Mod.EventBusSubscriber.Bus.MOD)
@@ -29,6 +37,12 @@ public class DataEvent  {
     //语言文件
     generator.addProvider(event.includeClient(),new Lang_EN(output,"en_us"));
     generator.addProvider(event.includeClient(),new Lang_CN(output,"zh_cn"));
-
+    //loot_table战利品表
+    generator.addProvider(event.includeServer(),new LootTableProvider(output, Collections.emptySet(),
+            List.of(new LootTableProvider.SubProviderEntry(Loot_tableGEN::new, LootContextParamSets.BLOCK))));
+    //配方
+    generator.addProvider(event.includeServer(),new RecipesGEN(output));
+     //标签
+    //ItemTagData itemTagData =new ItemTagData(output,lookupProvider,,helper);
     }
 }

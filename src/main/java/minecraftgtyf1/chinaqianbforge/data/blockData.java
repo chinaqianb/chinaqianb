@@ -19,7 +19,8 @@ public class blockData extends BlockStateProvider {
 //注册
     @Override
     protected void registerStatesAndModels() {
-this.registerBlockandItem(ModBlock.U235_BLOCK.get());
+    this.registerBlockandItem(ModBlock.U235_BLOCK.get());
+    this.registerBlockandItem(ModBlock.U235_ORE.get());
     }
     //简单模型
     public void registerBlockandItem(Block block){

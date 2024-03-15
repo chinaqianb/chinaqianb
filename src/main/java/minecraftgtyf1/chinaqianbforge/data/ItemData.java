@@ -19,7 +19,8 @@ public class ItemData extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
-itemmodel(ModItem.U235.get(),ItemLocation(itemname(ModItem.U235.get())));
+      itemmodel(ModItem.U235.get(),ItemLocation(itemname(ModItem.U235.get())));
+      itemmodel(ModItem.HEART_SNOW.get(),ItemLocation(itemname(ModItem.HEART_SNOW.get())));
     }
     public void itemmodel(Item item, ResourceLocation texture){
         withExistingParent(itemname(item),GEN).texture("layer0",texture);

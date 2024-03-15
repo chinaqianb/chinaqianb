@@ -15,6 +15,8 @@ public class ModBlock {
     //方块注册
     public static final RegistryObject<Block> U235_BLOCK =Blocks.register("u235_block",
             ()->new Block(BlockBehaviour.Properties.of().strength(2F)));
+    public static final RegistryObject<Block> U235_ORE =Blocks.register("u235_ore",
+            ()->new Block(BlockBehaviour.Properties.of().strength(4F)));
 
     public static void register(IEventBus eventBus){
         Blocks.register(eventBus);

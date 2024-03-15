@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "Chinaqainb",
+  "key": {
+    "#": {
+      "item": "chinaqianb_forge:u235"
+    }
+  },
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "result": {
+    "item": "chinaqianb_forge:u235_block"
+  },
+  "show_notification": true
+}

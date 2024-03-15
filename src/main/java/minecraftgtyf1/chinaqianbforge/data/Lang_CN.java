@@ -17,5 +17,8 @@ public class Lang_CN extends LanguageProvider {
         add(ModItem.U235.get(),"铀-235");
         add(ModBlock.U235_BLOCK.get(),"铀-235块");
         add(ModcreateTab.name,"chinaqianb的模组");
+        add(ModBlock.U235_ORE.get(),"铀-235矿");
+        add(ModItem.HEART_SNOW.get(),"回复球");
+        add("item.heart_snow_js","这是一个回复球，可以给半径为5范围内的玩家回血");
     }
 }

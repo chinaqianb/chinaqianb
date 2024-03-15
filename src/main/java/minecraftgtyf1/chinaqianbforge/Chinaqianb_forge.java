@@ -2,22 +2,26 @@ package minecraftgtyf1.chinaqianbforge;
 
 import com.mojang.logging.LogUtils;
 import minecraftgtyf1.chinaqianbforge.block.ModBlock;
+import minecraftgtyf1.chinaqianbforge.event.ModEvent;
 import minecraftgtyf1.chinaqianbforge.item.ModItem;
 import minecraftgtyf1.chinaqianbforge.item.ModcreateTab;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.entity.ai.targeting.TargetingConditions;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.food.FoodProperties;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.CreativeModeTabs;
-import net.minecraft.world.item.Item;
+import net.minecraft.world.item.*;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
+import net.minecraft.world.phys.AABB;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
+import net.minecraftforge.event.entity.living.LivingEntityUseItemEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -31,6 +35,8 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import org.slf4j.Logger;
+
+import java.util.Collection;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(Chinaqianb_forge.MODID)
@@ -51,6 +57,7 @@ public class Chinaqianb_forge {
         ModcreateTab.register(modEventBus);
         //方块注册
         ModBlock.register(modEventBus);
+     MinecraftForge.EVENT_BUS.register(ModEvent.class);
 
     }
 
@@ -80,5 +87,7 @@ public class Chinaqianb_forge {
             LOGGER.info("HELLO FROM CLIENT SETUP");
             LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
         }
+
     }
+
 }

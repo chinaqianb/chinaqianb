@@ -25,6 +25,8 @@ public class ModcreateTab {
                                 //物品
                                 output.accept(ModItem.U235.get());
                                 output.accept(ModItem.U235_BLOCK.get());
+                                output.accept(ModItem.U235_ORE.get());
+                                output.accept(ModItem.HEART_SNOW.get());
                             })
                             .build());
     public static void register(IEventBus eventBus){
